@@ -5,7 +5,7 @@
  * I want to increment by one the count variable each time I click the Increment button.
  */
 
-import { FC, useState } from "react";
+import { useState } from "react";
 
 const Counter = () => {
   const [count, setCount] = useState<number>(0);
@@ -16,6 +16,7 @@ const Counter = () => {
 
       <div>{count}</div>
 
+      {/* on click update count, I could have kept it as a seperate component and passes a function call through props, but it felt like over engineering */}
       <button
         onClick={() => setCount(count + 1)}
       >

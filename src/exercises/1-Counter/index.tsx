@@ -11,10 +11,12 @@ const Counter = () => {
   const [count, setCount] = useState<number>(0)
 
   useEffect(() => {
+    // update the count
     const interval = setInterval(() => {
       setCount(count + 1)
     }, 1000)
 
+    // stop the previous count and start a new count this is functionally a debounce
     return () => clearInterval(interval);
   })
 

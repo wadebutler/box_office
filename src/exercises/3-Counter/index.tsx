@@ -11,6 +11,12 @@ const Counter = () => {
   const [countA, setCountA] = useState<number>(10);
   const [countB, setCountB] = useState<number>(0);
 
+  // the below function increases count B well prevent the click function on the top level div, you should just remove the entire onClick but I assume this set up is the goal of the excersize
+  const handleB = (e: any) => {
+    e.stopPropagation()
+    setCountB(countB + 1);
+  }
+
   return (
     <div
       onClick={() => {
@@ -22,9 +28,7 @@ const Counter = () => {
       <pre>countB: {countB}</pre>
       <div>
         <button
-          onClick={() => {
-            setCountB(countB + 1);
-          }}
+          onClick={(e) => handleB(e)}
         >
           Increment count B
         </button>
