@@ -10,10 +10,10 @@
 import { useState } from "react";
 
 const Refac = () => {
-  const [member, setMember] = useState("-");
-  const [code, setCode] = useState("-");
-  const [order, setOrder] = useState(null);
-  const [data, setData] = useState([
+  const [member, setMember] = useState<string>("-");
+  const [code, setCode] = useState<string>("-");
+  const [order, setOrder] = useState<number>(0);
+  const [data, setData] = useState <Array <any>>([
     {name: "Guillaume", code: "ABCD", order: 1},
     {name: "Josian", code: "1234", order: 2},
     {name: "Jules", code: "EFGH", order: 3},
@@ -37,7 +37,7 @@ const Refac = () => {
     })
   }
 
-  const handleClick = (item) => {
+  const handleClick = (item: any) => {
     setMember(item.name);
     setCode(item.code);
     setOrder(item.order);
