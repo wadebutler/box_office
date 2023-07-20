@@ -13,6 +13,7 @@ const IncremenButton: FC<{ count: number }> = ({ count }) => {
   return (
     <button
       onClick={() => {
+        console.log("TEst")
         setSavedCount(savedCount + 1);
       }}
     >
