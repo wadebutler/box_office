@@ -1,8 +1,39 @@
-.picture {
-  height: 300px;
+.Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.wrapper {
-  height: 500px;
-  background-color: #eee;
+
+.ContentContainer {
+  display: flex;
+}
+
+nav {
+  width: 15%;
+}
+
+h3 {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 70%;
+}
+
+h2 {
+  text-align: center;
+}
+
+aside {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
